@@ -7,10 +7,16 @@ const app = express();
 app.get('/', (req,res) => {
     res.end('<h1> Hello World </h1>');
 });
+// master는 여기까지
+
+// branch
 
 app.get('home', (req,res) => {
     res.end('<h1> Home Sweet Home </h1>');
 });
+// app_step1 에서는 여기까지
+
+// master로 돌아가면 app.get() 작성 부분은 사라짐.
 
 const server = http.createServer(app);
 server.listen(3000, () => {
