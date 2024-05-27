@@ -11,12 +11,20 @@ app.get('/', (req,res) => {
 
 // branch
 
-app.get('home', (req,res) => {
+app.get('/home', (req,res) => {
     res.end('<h1> Home Sweet Home </h1>');
 });
 // app_step1 에서는 여기까지
 
 // master로 돌아가면 app.get() 작성 부분은 사라짐.
+
+app.get('/profile', (req,res) => {
+    res.end('<h1> Profile Picture </h1>');
+});
+
+app.get('/shop', (req,res) => {
+    res.end('<h1> Shopping Store </h1>');
+});
 
 const server = http.createServer(app);
 server.listen(3000, () => {
