@@ -17,6 +17,7 @@ app.get('/home', (req,res) => {
 // app_step1 에서는 여기까지
 
 // master로 돌아가면 app.get() 작성 부분은 사라짐.
+// --- merge---
 
 app.get('/profile', (req,res) => {
     res.end('<h1> Profile Picture </h1>');
@@ -25,6 +26,8 @@ app.get('/profile', (req,res) => {
 app.get('/shop', (req,res) => {
     res.end('<h1> Shopping Store </h1>');
 });
+
+// step1
 
 const server = http.createServer(app);
 server.listen(3000, () => {
